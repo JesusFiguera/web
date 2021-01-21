@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trivias - Categorias</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='categorias.css') }}">
+    </head>
+    <body>
+        <ul class="barra">
+            <li><a href=" {{url_for('user.index')}} ">Inicio</a></li>
+            <li><a href=" {{url_for('auth.logout')}} ">Logout</a></li>
+        </ul>
+        <h1 class="header">Categorias</h1>
+        <ul class="categorias">
+            <li><a href=" {{url_for('trivia.categoria1')}} ">Entretenimiento</a></li>
+            <li><a href=" {{url_for('trivia.categoria2')}} ">Comida</a></li>
+            <li><a href="#">Categoria 3</a></li>
+        </ul>
+        <h1 class="title">Trivias</h1>
+    </body>
+</html>

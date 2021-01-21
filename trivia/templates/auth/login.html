@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    </head>
+    <body>
+        <ul class="barra">
+            <li><a href=" {{ url_for('auth.inicio') }} ">Inicio</a></li>
+            <li><a href=" {{ url_for('auth.login') }} ">Login</a></li>
+            <li><a href=" {{ url_for('auth.register') }} ">Sign up</a></li>
+        </ul>
+        <h1 class="header">Login</h1>
+            <div class="caja">
+                <form method="POST">
+                    <input type="Username"  name="username" id="username" placeholder="Username"/>
+                    <br/>
+                    <br/>
+                    <input type="password"  name="password" id="password" placeholder="Password"/>
+                    <br/>
+                    <br/>
+                    <input type="submit" value="Login"/>
+                </form>
+        </div>
+    </body>
+</html>

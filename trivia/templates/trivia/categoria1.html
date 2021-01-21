@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trivia - Entretenimiento</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='trivia1.css') }}">
+    </head>
+    <body>
+        <h1 id="exit"><a href=" {{url_for('user.index')}} ">← Go back!</a></h1>
+        <h1 class="header">Trivia Has Started</h1>
+        <form method="POST">
+            <fieldset>
+            {% for i in range(rango) %}
+            <h1> {{pregunta[i][0]}} </h1>
+            <input type="radio" name="{{i+1}}" value="{{pregunta[i][1]}}" required "/>
+            <label> {{respuesta[i][0]}} </label>
+            <br/>
+            <BR/>
+            <input type="radio" name="{{i+1}}" value="{{pregunta[i][2]}}" required"/>
+            <label> {{respuesta[i][1]}} </label>
+            <br/>
+            <br/>
+            <input type="radio" name="{{i+1}}" value="{{pregunta[i][3]}}" required "/>
+            <label> {{respuesta[i][2]}} </label>
+            <br/>           
+            <BR/> 
+            <input type="radio" name="{{i+1}}" value="{{pregunta[i][4]}}" required"/>
+            <label> {{respuesta[i][3]}} </label>
+            <br/>
+            <br/>
+            <input type="radio" name="{{i+1}}" value="{{pregunta[i][5]}}" required"/>
+            <label> {{respuesta[i][4]}} </label>
+            <br/>
+            <br/>
+            <hr/>
+            {% endfor %}
+            </fieldset>
+            <input type="submit" value="Done!" id="boton"/>
+        </form>
+    </body>
+</html>

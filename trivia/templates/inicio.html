@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicio</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='inicio.css') }}">
+    </head>
+    <body>
+        <ul class="barra">
+            <li><a href=" {{ url_for('auth.inicio') }} ">Inicio</a></li>
+            <li><a href=" {{ url_for('auth.login') }} ">Login</a></li>
+            <li><a href=" {{ url_for('auth.register') }} ">Sign up</a></li>
+        </ul>
+        <h1 class="header">Bienvenido al inicio!</h1>
+    </body>
+</html>

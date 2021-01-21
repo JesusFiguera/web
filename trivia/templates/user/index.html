@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='inicio.css') }}">
+    </head>
+    <body>
+        <ul class="barra">
+            <li><a href=" {{ url_for('user.index') }} ">Inicio</a></li>
+            <li><a href=" {{ url_for('trivia.categorias') }} ">Trivias</a></li>
+            <li><a href=" {{ url_for('auth.logout') }} ">Log out</a></li>
+        </ul>
+        <h1 class="header">Bienvenido! {{user['username']}} </h1>
+        <h1 class="header">Trivias totales completadas: {{contador}} </h1>
+    </body>
+</html>
